@@ -81,4 +81,40 @@ public class PosterManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
+    @Test
+    public void TestFindLast2() {
+        PosterManager poster = new PosterManager(7);
+        poster.add(film1);
+        poster.add(film2);
+        poster.add(film3);
+        poster.add(film4);
+        poster.add(film5);
+
+
+
+        PosterManager[] expected = {film5, film4, film3, film2, film1};
+        PosterManager[] actual = poster.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void TestFindLast3() {
+        PosterManager poster = new PosterManager(5);
+        poster.add(film1);
+        poster.add(film2);
+        poster.add(film3);
+        poster.add(film4);
+        poster.add(film5);
+        poster.add(film6);
+        poster.add(film7);
+
+
+        PosterManager[] expected = {film5, film4, film3, film2, film1 };
+        PosterManager[] actual = poster.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
 }
