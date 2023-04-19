@@ -111,10 +111,11 @@ public class PosterManagerTest {
         poster.add(film7);
 
 
-        PosterManager[] expected = {film5, film4, film3, film2, film1 };
+        PosterManager[] expected = {film7, film6, film5, film4, film3 };
         PosterManager[] actual = poster.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
 
     }
 }
+
